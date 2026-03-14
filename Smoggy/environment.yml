@@ -1,0 +1,22 @@
+name: smoggy
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scikit-learn
+  - lightgbm
+  - xgboost
+  - pytorch
+  - cudatoolkit
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - pip
+  - pip:
+      - lifelines
+      - imbalanced-learn
+      - papermill
+      - pyarrow
