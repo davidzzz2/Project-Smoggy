@@ -84,9 +84,17 @@ Key requirements:
   - Hierarchical site-level updates (new random-effect draws) for fast adaptation.
 - Log every update batch with data provenance, QC report, and before/after calibration metrics.
 
+## Implementation Status (2026-03-16)
+
+- ✅ PyMC-based CLI scaffold for Model 1 now lives in `Smoggy/models/hierarchical_logistic.py` with Typer subcommands for `fit` and `predict`.
+- ✅ `Smoggy/models/configs/model1_example.yaml` documents required columns + priors.
+- ✅ Dependencies captured in `Smoggy/configs/requirements.txt` (PyMC, ArviZ, Typer, etc.).
+- 🔄 Pending: plug in finalized feature dictionary + validated parquet schema from Phase 1 surveys.
+- 🔄 Pending: add Elastic Net/XGBoost benchmarking scripts + evaluation harness.
+
 ## Next Steps
 
 1. Finalize feature dictionaries from Niko’s Phase 1 surveys.
-2. Implement Model 1 in PyMC or NumPyro with reproducible scripts under `Smoggy/models/`.
+2. Wire the new CLI to the actual Phase 2 feature parquet and run an end-to-end dry run.
 3. Draft `model_blueprint.md` addendum with mathematical notation and pseudo-code once features are concrete.
 4. Stand up baseline Elastic Net/XGBoost scripts for comparison.
